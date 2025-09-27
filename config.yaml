@@ -1,0 +1,45 @@
+baseURL: "https://drakulati.github.io/stop-chat-control-hugo/"
+languageCode: "hu-HU"
+title: "EU Chat Control – Állítsuk meg a Chat Control törvényt!"
+
+params:
+  description: "Tájékoztató oldal a Chat Control törvény ellen. Írd meg a képviselődnek, hogy ne szavazzon a megfigyelésre!"
+  author: "Stop Chat Control"
+  analytics:
+    google_analytics_id: ""  # Itt lehet majd beállítani
+  social:
+    twitter: ""
+    github: ""
+
+menu:
+  main:
+    - name: "Szabadság természetrajza"
+      url: "/szabadsag-termeszetrajza/"
+      weight: 1
+    - name: "Gyermekvédelem"
+      url: "/gyermekvedelem/"
+      weight: 2
+    - name: "Jogi keret"
+      url: "/jogi-keret/"
+      weight: 3
+    - name: "Technológiai kockázatok"
+      url: "/technologiai-kockazatok/"
+      weight: 4
+    - name: "Gazdasági hatások"
+      url: "/gazdasagi-hatasok/"
+      weight: 5
+    - name: "Mindennapi veszélyek"
+      url: "/mindennapi-veszelyek/"
+      weight: 6
+    - name: "Jobb megoldások"
+      url: "/jobb-megoldasok/"
+      weight: 7
+
+outputs:
+  home: ["HTML", "RSS"]
+  page: ["HTML"]
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
