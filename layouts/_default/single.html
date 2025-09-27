@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }} – {{ .Site.Title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="header-top">
+      <div class="header-content">
+        <div class="logo">
+          <span class="shield-icon">🛡️</span>
+          <span class="stop-text">STOP</span>
+          <span class="control-text">Chat Control</span>
+        </div>
+        <nav class="main-nav" aria-label="Főmenü">
+          {{ range .Site.Menus.main }}
+            <a class="btn primary" href="{{ .URL }}">{{ .Name }}</a>
+          {{ end }}
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <main class="wrap">
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+      <a href="/">← Vissza a főoldalra</a>
+    </div>
+
+    {{ .Content }}
+  </main>
+
+  <!-- STICKY CTA -->
+  <div class="sticky-cta">
+    <div class="inner">
+      <div class="message"><strong>{{ .Title }}:</strong> írd meg a képviselődnek, hogy NE szavazzon a Chat Controlra!</div>
+      <div class="cta">
+        <a class="btn primary" href="/#meps">📧 Írok a képviselőmnek</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    A gyermekvédelem fontos – de nem a Chat Control az egyetlen út.<br>
+    Támogasd a valóban működő megoldásokat – <a href="/#meps">írj a képviselődnek</a> még ma!
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
